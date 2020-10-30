@@ -1,20 +1,22 @@
 import 'rational.dart';
 
-class Decimal implements Comparable<Decimal> {
-  factory Decimal.parse(String value) =>
-      Decimal._fromRational(Rational.parse(value));
+///
+/// AiDecimalAccuracy
+class AiDecimalAccuracy implements Comparable<AiDecimalAccuracy> {
+  factory AiDecimalAccuracy.parse(String value) =>
+      AiDecimalAccuracy._fromRational(Rational.parse(value));
 
-  factory Decimal.fromInt(int value) =>
-      Decimal._fromRational(Rational(BigInt.from(value)));
+  factory AiDecimalAccuracy.fromInt(int value) =>
+      AiDecimalAccuracy._fromRational(Rational(BigInt.from(value)));
 
-  Decimal._fromRational(this._rational);
+  AiDecimalAccuracy._fromRational(this._rational);
 
-  static Decimal zero = Decimal.fromInt(0);
-  static Decimal one = Decimal.fromInt(1);
+  static AiDecimalAccuracy zero = AiDecimalAccuracy.fromInt(0);
+  static AiDecimalAccuracy one = AiDecimalAccuracy.fromInt(1);
 
-  static Decimal tryParse(String value) {
+  static AiDecimalAccuracy tryParse(String value) {
     try {
-      return Decimal.parse(value);
+      return AiDecimalAccuracy.parse(value);
     } on FormatException {
       return null;
     }
@@ -24,11 +26,12 @@ class Decimal implements Comparable<Decimal> {
 
   bool get isInteger => _rational.isInteger;
 
-  Decimal get inverse => Decimal._fromRational(_rational.inverse);
+  AiDecimalAccuracy get inverse =>
+      AiDecimalAccuracy._fromRational(_rational.inverse);
 
   @override
   bool operator ==(Object other) =>
-      other is Decimal && _rational == other._rational;
+      other is AiDecimalAccuracy && _rational == other._rational;
 
   @override
   int get hashCode => _rational.hashCode;
@@ -39,49 +42,50 @@ class Decimal implements Comparable<Decimal> {
   // implementation of Comparable
 
   @override
-  int compareTo(Decimal other) => _rational.compareTo(other._rational);
+  int compareTo(AiDecimalAccuracy other) =>
+      _rational.compareTo(other._rational);
 
   // implementation of num
 
-  Decimal operator +(Decimal other) =>
-      Decimal._fromRational(_rational + other._rational);
+  AiDecimalAccuracy operator +(AiDecimalAccuracy other) =>
+      AiDecimalAccuracy._fromRational(_rational + other._rational);
 
-  Decimal operator -(Decimal other) =>
-      Decimal._fromRational(_rational - other._rational);
+  AiDecimalAccuracy operator -(AiDecimalAccuracy other) =>
+      AiDecimalAccuracy._fromRational(_rational - other._rational);
 
-  Decimal operator *(Decimal other) =>
-      Decimal._fromRational(_rational * other._rational);
+  AiDecimalAccuracy operator *(AiDecimalAccuracy other) =>
+      AiDecimalAccuracy._fromRational(_rational * other._rational);
 
-  Decimal operator %(Decimal other) =>
-      Decimal._fromRational(_rational % other._rational);
+  AiDecimalAccuracy operator %(AiDecimalAccuracy other) =>
+      AiDecimalAccuracy._fromRational(_rational % other._rational);
 
-  Decimal operator /(Decimal other) =>
-      Decimal._fromRational(_rational / other._rational);
+  AiDecimalAccuracy operator /(AiDecimalAccuracy other) =>
+      AiDecimalAccuracy._fromRational(_rational / other._rational);
 
   /// Truncating division operator.
   ///
   /// The result of the truncating division [:a ~/ b:] is equivalent to
   /// [:(a / b).truncate():].
-  Decimal operator ~/(Decimal other) =>
-      Decimal._fromRational(_rational ~/ other._rational);
+  AiDecimalAccuracy operator ~/(AiDecimalAccuracy other) =>
+      AiDecimalAccuracy._fromRational(_rational ~/ other._rational);
 
-  Decimal operator -() => Decimal._fromRational(-_rational);
+  AiDecimalAccuracy operator -() => AiDecimalAccuracy._fromRational(-_rational);
 
   /// Return the remainder from dividing this [num] by [other].
-  Decimal remainder(Decimal other) =>
-      Decimal._fromRational(_rational.remainder(other._rational));
+  AiDecimalAccuracy remainder(AiDecimalAccuracy other) =>
+      AiDecimalAccuracy._fromRational(_rational.remainder(other._rational));
 
   /// Relational less than operator.
-  bool operator <(Decimal other) => _rational < other._rational;
+  bool operator <(AiDecimalAccuracy other) => _rational < other._rational;
 
   /// Relational less than or equal operator.
-  bool operator <=(Decimal other) => _rational <= other._rational;
+  bool operator <=(AiDecimalAccuracy other) => _rational <= other._rational;
 
   /// Relational greater than operator.
-  bool operator >(Decimal other) => _rational > other._rational;
+  bool operator >(AiDecimalAccuracy other) => _rational > other._rational;
 
   /// Relational greater than or equal operator.
-  bool operator >=(Decimal other) => _rational >= other._rational;
+  bool operator >=(AiDecimalAccuracy other) => _rational >= other._rational;
 
   bool get isNaN => _rational.isNaN;
 
@@ -90,7 +94,7 @@ class Decimal implements Comparable<Decimal> {
   bool get isInfinite => _rational.isInfinite;
 
   /// Returns the absolute value of this [num].
-  Decimal abs() => Decimal._fromRational(_rational.abs());
+  AiDecimalAccuracy abs() => AiDecimalAccuracy._fromRational(_rational.abs());
 
   /// The signum function value of this [num].
   ///
@@ -98,20 +102,23 @@ class Decimal implements Comparable<Decimal> {
   int get signum => _rational.signum;
 
   /// Returns the greatest integer value no greater than this [num].
-  Decimal floor() => Decimal._fromRational(_rational.floor());
+  AiDecimalAccuracy floor() =>
+      AiDecimalAccuracy._fromRational(_rational.floor());
 
   /// Returns the least integer value that is no smaller than this [num].
-  Decimal ceil() => Decimal._fromRational(_rational.ceil());
+  AiDecimalAccuracy ceil() => AiDecimalAccuracy._fromRational(_rational.ceil());
 
   /// Returns the integer value closest to this [num].
   ///
   /// Rounds away from zero when there is no closest integer:
   /// [:(3.5).round() == 4:] and [:(-3.5).round() == -4:].
-  Decimal round() => Decimal._fromRational(_rational.round());
+  AiDecimalAccuracy round() =>
+      AiDecimalAccuracy._fromRational(_rational.round());
 
   /// Returns the integer value obtained by discarding any fractional digits
   /// from this [num].
-  Decimal truncate() => Decimal._fromRational(_rational.truncate());
+  AiDecimalAccuracy truncate() =>
+      AiDecimalAccuracy._fromRational(_rational.truncate());
 
   /// Returns the integer value closest to `this`.
   ///
@@ -139,8 +146,9 @@ class Decimal implements Comparable<Decimal> {
 
   /// Clamps `this` to be in the range [lowerLimit]-[upperLimit]. The comparison
   /// is done using [compareTo] and therefore takes [:-0.0:] into account.
-  Decimal clamp(Decimal lowerLimit, Decimal upperLimit) =>
-      Decimal._fromRational(
+  AiDecimalAccuracy clamp(
+          AiDecimalAccuracy lowerLimit, AiDecimalAccuracy upperLimit) =>
+      AiDecimalAccuracy._fromRational(
           _rational.clamp(lowerLimit._rational, upperLimit._rational));
 
   /// Truncates this [num] to an integer and returns the result as an [int].
@@ -192,5 +200,6 @@ class Decimal implements Comparable<Decimal> {
   /// Returns [one] if the [exponent] equals `0`.
   ///
   /// The [exponent] must otherwise be positive.
-  Decimal pow(int exponent) => Decimal._fromRational(_rational.pow(exponent));
+  AiDecimalAccuracy pow(int exponent) =>
+      AiDecimalAccuracy._fromRational(_rational.pow(exponent));
 }

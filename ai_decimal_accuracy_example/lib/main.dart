@@ -1,3 +1,4 @@
+import 'package:ai_decimal_accuracy/ai_decimal_accuracy.dart';
 import 'package:flutter/material.dart';
 
 void main() {
