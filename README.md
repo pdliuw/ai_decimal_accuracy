@@ -11,7 +11,7 @@ A new Flutter package about decimal accuracy.
 
 |iOS-ai_decimal_accuracy|Android-ai_decimal_accuracy|
 |:-|:-|
-|![ios](https://github.com/pdliuw/ai_decimal_accuracy/blob/master/example/gif/ai_decimal_accuracy_ios.gif)|![android](https://github.com/pdliuw/ai_decimal_accuracy/blob/master/example/gif/ai_decimal_accuracy_android.gif)|
+|![ios](https://github.com/pdliuw/ai_decimal_accuracy/blob/master/ai_decimal_accuracy_example/gif/ai_decimal_accuracy_ios.gif?raw=true)|![android](https://github.com/pdliuw/ai_decimal_accuracy/blob/master/ai_decimal_accuracy_example/gif/ai_decimal_accuracy_android.gif?raw=true)|
 |:-|:-|
 
 ## 1.安装
