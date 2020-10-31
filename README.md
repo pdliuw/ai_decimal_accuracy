@@ -7,6 +7,13 @@ A new Flutter package about decimal accuracy.
 -----
 
 
+## Effect
+
+|iOS-ai_decimal_accuracy|Android-ai_decimal_accuracy|
+|:-|:-|
+|![ios](https://github.com/pdliuw/ai_decimal_accuracy/blob/master/example/gif/ai_decimal_accuracy_ios.gif)|![android](https://github.com/pdliuw/ai_decimal_accuracy/blob/master/example/gif/ai_decimal_accuracy_android.gif)|
+|:-|:-|
+
 ## 1.安装
 
 使用当前包作为依赖库
@@ -72,7 +79,7 @@ import 'package:ai_decimal_accuracy/ai_decimal_accuracy.dart';
                         AiDecimalAccuracy singlePrice =
                             AiDecimalAccuracy.parse("2.2");
                         
-                        var total = singlePrice * litreNum;
+                        var total = (singlePrice * litreNum).toDouble();
 
 ```
 

@@ -32,6 +32,8 @@ dependencies:
   ai_decimal_accuracy:
     path: ../
 
+  air_design: ^0.0.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
