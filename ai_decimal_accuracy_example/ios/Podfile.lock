@@ -1,0 +1,60 @@
+PODS:
+  - ai_amap (0.0.1):
+    - AMapLocation
+    - AMapNavi
+    - Flutter
+  - ai_barcode (0.0.1):
+    - Flutter
+    - MTBBarcodeScanner
+  - AMapFoundation (1.6.3)
+  - AMapLocation (2.6.5):
+    - AMapFoundation (~> 1.6.3)
+  - AMapNavi (7.5.0):
+    - AMapFoundation (~> 1.6.3)
+  - Flutter (1.0.0)
+  - MTBBarcodeScanner (5.0.11)
+  - "permission_handler (5.1.0+2)":
+    - Flutter
+  - shared_preferences (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - ai_amap (from `.symlinks/plugins/ai_amap/ios`)
+  - ai_barcode (from `.symlinks/plugins/ai_barcode/ios`)
+  - Flutter (from `Flutter`)
+  - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
+  - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
+
+SPEC REPOS:
+  trunk:
+    - AMapFoundation
+    - AMapLocation
+    - AMapNavi
+    - MTBBarcodeScanner
+
+EXTERNAL SOURCES:
+  ai_amap:
+    :path: ".symlinks/plugins/ai_amap/ios"
+  ai_barcode:
+    :path: ".symlinks/plugins/ai_barcode/ios"
+  Flutter:
+    :path: Flutter
+  permission_handler:
+    :path: ".symlinks/plugins/permission_handler/ios"
+  shared_preferences:
+    :path: ".symlinks/plugins/shared_preferences/ios"
+
+SPEC CHECKSUMS:
+  ai_amap: ccf21d9cccb9f2171f7331fd6421a287f3712cfa
+  ai_barcode: 67fb0a7b732dbb87e92b59bb90a438db9383fa2f
+  AMapFoundation: 9ed923193b357ebb30a073e9fe255d3c24054d5a
+  AMapLocation: c566d448285cd502c1e313063d9e2460bd4d7100
+  AMapNavi: a47cf864249da145c0055fd31c49c0006da5ce64
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  MTBBarcodeScanner: f453b33c4b7dfe545d8c6484ed744d55671788cb
+  permission_handler: ccb20a9fad0ee9b1314a52b70b76b473c5f8dab0
+  shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.1

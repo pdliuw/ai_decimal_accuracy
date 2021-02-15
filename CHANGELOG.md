@@ -1,3 +1,7 @@
+## [1.1.0]
+
+* adapter flutter = v1.22
+
 ## [1.0.3]
 
 * update example
